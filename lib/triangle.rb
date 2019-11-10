@@ -7,7 +7,7 @@ class Triangle
     @side1 = side1
     @side2 = side2
     @side3 = side3
-    self.valid?
+    # self.valid? # why not raise the error here so invalid triangles aren't created?
   end
 
   def kind
@@ -29,6 +29,8 @@ class Triangle
     else
       begin
         raise TriangleError
+      rescue TriangleError => error
+        puts error.message
       end
     end
   end
