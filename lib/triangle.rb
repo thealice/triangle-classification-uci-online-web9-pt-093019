@@ -29,18 +29,16 @@ class Triangle
     else
       begin
         raise TriangleError
-      rescue TriangleError => error
-        puts error.message
+      # rescue TriangleError => error
+      #   puts error.message
       end
     end
   end
 
-
-
   class TriangleError < StandardError
-    def message
-      "Not a valid triangle."
-    end
+    # def message
+    #   "Not a valid triangle."
+    # end
   end
 
 end
