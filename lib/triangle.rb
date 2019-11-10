@@ -29,6 +29,7 @@ class Triangle
     else
       begin
         raise TriangleError
+      # rescue caused tests to fail
       # rescue TriangleError => error
       #   puts error.message
       end
